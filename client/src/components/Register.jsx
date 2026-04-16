@@ -7,12 +7,22 @@ export default function Register() {
     const [mobile,setMobile]=useState("")
     function handleRegister(e){
         e.preventDefault()
-        API.post("/auth/register",{name,email,password,mobile})
+       
+        API.post("/auth/register",{name,email,password,mobile:Number(mobile)})
             .then((res)=>{
-                console.log(res)
+                console.log("from then method",res)
+                if(res.status===201){
+                    alert("Registration successfully")
+                }
+                else if(res.status==401){
+                    alert(res.data.message)
+                }
             })
             .catch(err=>{
-                console.log(err)
+                console.log("from catch block",err)
+                if(err.status==401){
+                    alert(err.response.data.message)
+                }
             })
     }
     return (
