@@ -5,7 +5,7 @@ import Register from './components/Register'
 import Login from './components/Login'
 import Addproduct from './components/Addproduct'
 import Home from './components/Home'
-import ProtectedRoute from './components/ProtectedRoute'
+import ProtectedRoute from './components/ProtectedRoute.jsx'
 import Cart from './components/Cart'
 
 
