@@ -4,7 +4,7 @@ const app= express()
 const cors = require("cors")
 require("dotenv").config()
 const authRoutes=require("./routes/authRoutes")
-const productRoutes=require("./routes/ProductRoutes")
+const productRoutes=require("./routes/productRoutes")
 
 app.use(cors())
 app.use(express.json())
