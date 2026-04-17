@@ -12,7 +12,8 @@ export default function Login() {
             .then((res)=>{
                 if(res.status==200){
                     alert("Login successful")
-                    localStorage.setItem("token",res.data.token)    
+                    localStorage.setItem("token",res.data.token)
+                    localStorage.setItem("role", res.data.user.role);
                     navigate("/")
                 }
             })
@@ -44,4 +45,4 @@ export default function Login() {
         </div>
     </div>
   )
-}   
+}
